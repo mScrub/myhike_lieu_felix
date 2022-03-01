@@ -47,7 +47,11 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-    <!-- stuff -->
+    <div class="container">
+        <h1>Let's Login! and then Log Out!</h1>
+    </div>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
@@ -57,8 +61,11 @@
     <!---------------------------------------------->
     <!-- Hook point for firebaseAPI script location.   -->
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
+    <!-- To read skeleton.js  -->
+    <script src="./scripts/skeleton.js"></script> 
+    <script src="./scripts/script.js"></script>
+    <!-- This is essential as other scripts because login will need to be able to see auth.js -->
+    <script src="./scripts/authentication.js"></script>
 
 </body>
 
