@@ -25,6 +25,7 @@
     <!-------------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- This has to exist for each so we can write into firestore. -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
@@ -49,9 +50,15 @@
     <!-- the body of your page goes here -->
     <div class="container-fluid bg-dark text-light p-5">
         <div class="container bg-dark p-5">
-            <h1 class="display-4">Good evening!</h1>
+            <h1 class="display-4">Good evening! <span id="name-goes-here">...</span></h1>
             <hr>
-            <p>Quote of the day: This is interesting OuO!</p>
+            <!-- Number of quotes in firebase/firestore, if it's tuesday. -->
+            <!-- It'll show quote of Tuesday and following weekdays. -->
+            <!-- So we want to alternate the quotes.   -->
+            <!-- Done by reading database, and then display quote -->
+            <!-- Go back to main.js to check.  -->
+            <p>Quote of the day: <span id="quote-goes-here">...</span></p>
+            <!-- quoting id, has to be letter perfect. It also has to be unique. -->
         </div>
     </div>
 
@@ -65,6 +72,7 @@
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/main.js"></script>
 
 </body>
 
